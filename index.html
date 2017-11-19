@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Let's Eat</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<h1 class = "center-align mainTitle">Let's Eat</h1>
+			 <div class="divider"></div>
+		</div>
+		
+	</div>
+
+	<div class="row">
+		<div class="input-field col l3 s12">
+			 <input value = "" id="zipcode" type="text" class="validate"> 
+     			<label class="active" for="zipCode">Zip Code</label>
+		</div>
+		<div class="input-field col l3 s12">
+			<select id="restaurant-type">
+      			<option class = "defaultText" value="" disabled selected>Select a Category</option>
+
+     			 <option value="1">American</option>
+     			 <option value="193">BBQ</option>
+     			  <option value="3">Asian</option>
+     			  <option value="148">Indian</option>
+     			  <option value="55">Italian</option>
+     			   <option value="73">Mexican</option>
+     			   <option value="82">Pizza</option>
+     			   <option value="141">Steak</option>
+
+
+    		</select>
+    		<label>Category</label>
+			
+		</div>
+		<div class="input-field col l3 s12">
+			<select id="prices">
+				<option class = "defaultText" value="" disabled selected>Select a price range</option>
+				<option value="0">$</option>
+				<option value="1">$$</option>
+				<option value="2">$$$</option>
+				<option value="3">$$$$</option>
+				<option value="4">$$$$$</option>
+			</select>
+			<label>Price Range</label>
+		</div>
+		<div class="col l3 s12">
+			<div class="input-field col s8">
+				<input value = "" id = "max-distance" type="text" class="validate">
+				<label class="active defaultText" for="maxDist">Distance</label>
+			</div>
+			<div class="input-field col s4">
+				<select id = "unit">
+					<option value="1">mi</option>
+					<option value="2">km</option>
+				</select>
+			</div>
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col s12 center-align">
+			  <button class="btn waves-effect waves-light" type="submit" id="pick-restaurant" name="action">Submit <i class="material-icons right"></i></button>
+		</div>
+	</div>
+	<div class="row" >
+
+		<div class="col l6 m12 map-and-info">
+			<div id="map"></div>
+		</div>
+		<div class="col l6 m12 map-and-info">
+			<div class="row">
+				<div id = "restaurantInfo">
+					
+				</div>
+			</div>
+			<div id="restaurant-reviews">
+				<div class = "card horizontal" id = "firstReview">
+					<div class="card-stacked">
+						<div class="row">
+							<div class="col l3 m3">
+								<div id = "cardImg" class="card-content circle">
+									
+								</div>
+							</div>
+							<div class="col l9 m9">
+								<div id = "cardContent" class="card-content">
+									
+								</div>
+							</div>
+						</div>
+						<div class="card-action">
+							<a href = "#" id = "showMoreReviews">See More Reviews</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col s12">
+			
+		</div>
+	</div>
+	
+
+</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC36_KRCQZfFxrJsNSZkGKcmlvzNd_v-Hg&libraries=places" async defer></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+	
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+	<script type="text/javascript" src="assets/javascript/zipCodeValidationLogic.js"></script>
+	<!-- <script type="text/javascript" src="assets/javascript/zomatoLogic.js"></script> -->
+	
+</body>
